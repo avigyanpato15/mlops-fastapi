@@ -2,7 +2,7 @@ from sqlalchemy import Column,Integer, Float, String
 from Database import Base
 
 class Notes(Base):
-    __tablename__= "banknote2"
+    __tablename__= "banknote10"
 
     Id = Column(Integer,primary_key=True,index=True)
     variance = Column(Float)
