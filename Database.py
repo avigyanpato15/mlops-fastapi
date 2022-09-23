@@ -7,11 +7,11 @@ import os
 
 #SQLALCHEMY_DATABASE_URL = "sqlite:///./banknote.db"
 
-host_server = os.environ.get('host_server', 'localhost')
+host_server = os.environ.get('host_server', 'fastapi-notepred-server.postgres.database.azure.com')
 db_server_port = urllib.parse.quote_plus(str(os.environ.get('db_server_port', '5432')))
 database_name = os.environ.get('database_name', 'fastapi-notepred-db')
-db_username = urllib.parse.quote_plus(str(os.environ.get('db_username', 'postgres')))
-db_password = urllib.parse.quote_plus(str(os.environ.get('db_password', 'secret')))
+db_username = urllib.parse.quote_plus(str(os.environ.get('db_username', 'FastapiPato')))
+db_password = urllib.parse.quote_plus(str(os.environ.get('db_password', 'Fastapi123')))
 SQLALCHEMY_DATABASE_URL='mysql+mysqlconnector://{}:{}@{}:{}/{}'.format(db_username,db_password,host_server,db_server_port,database_name)
 
 
