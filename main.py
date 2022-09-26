@@ -125,7 +125,8 @@ def predict_banknote(note: BankNote, db: Session = Depends(get_db)):
 
     # print(classifier.predict([[variance,skewness,curtosis,entropy]]))
     prediction = classifier.predict([[variance, skewness, curtosis, entropy]])
-
+    
+    note_class = 0
 
     print(prediction)
     if (prediction[0] > 0.5):
