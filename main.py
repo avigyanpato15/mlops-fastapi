@@ -129,9 +129,11 @@ def predict_banknote(note: BankNote, db: Session = Depends(get_db)):
 
     print(prediction)
     if (prediction[0] > 0.5):
+        note_model.class = 1
         prediction = "Fake note"
         note_model.prediction = "Fake Note"
     else:
+        note_model.class = 0
         prediction = "Its a Bank note"
         note_model.prediction = "Its a Bank note"
 
