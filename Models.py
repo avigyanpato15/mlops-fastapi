@@ -9,5 +9,5 @@ class Notes(Base):
     skewness = Column(Float)
     curtosis = Column(Float)
     entropy = Column(Float)
-    class = Column(Integer)
+    note_class = Column(Integer)
     prediction = Column(String(40))
